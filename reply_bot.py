@@ -1,5 +1,5 @@
 import asyncio
-from aiogram import Bot, Dispatcher
+from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 
@@ -29,13 +29,15 @@ async def handle_message(message: Message):
     elif text == "Як справи? 😊":
         await message.answer("Усе чудово! А в тебе?")
     elif text == "Анекдот 🤣":
-        await message.answer("Як називається кіт-програміст? — JavaMeow!")
+        await message.answer("Як називається кіт-програміст? — JavaMeow! 😸")
     else:
         await message.answer("Натисни одну з кнопок 😺")
+
 
 async def main():
     print("Бот запущений...")
     await dp.start_polling(bot)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
